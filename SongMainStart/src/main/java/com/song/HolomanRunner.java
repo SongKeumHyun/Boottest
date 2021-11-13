@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import com.example.Holoman;
 import com.song.scheduler.Dispatcher;
+import com.song.services.SampleService;
 
 
 @Component
@@ -33,6 +34,9 @@ public class HolomanRunner implements ApplicationRunner {
 	@Autowired
 	private Environment environment;
 	
+	@Autowired
+	private SampleService sampleService;
+	
 	private Logger logger = LoggerFactory.getLogger(HolomanRunner.class);
 		
 
@@ -49,7 +53,7 @@ public class HolomanRunner implements ApplicationRunner {
 		logger.debug("프로퍼티에서 가져 온값 " + name);
 		
 
-		
+		logger.info("-----"  + sampleService.toString() );
 		
 	}
 

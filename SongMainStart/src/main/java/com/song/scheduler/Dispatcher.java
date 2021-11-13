@@ -10,10 +10,12 @@ public class Dispatcher {
 	
 	private Logger logger = LoggerFactory.getLogger(Dispatcher.class);
 	
+	private long count = 0;
+	
 	@Scheduled (fixedDelay = 1000)
 	public void dippatcher()
 	{
-		logger.debug("Dispatcher.........");
+		logger.debug("Dispatcher........." + count++);
 	}
 
 }
