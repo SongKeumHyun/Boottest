@@ -11,6 +11,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import com.example.Holoman;
+import com.song.scheduler.Dispatcher;
 
 
 @Component
@@ -21,6 +22,9 @@ public class HolomanRunner implements ApplicationRunner {
 	
 	@Autowired
 	SongProperties songProperties;
+	
+	@Autowired
+	Dispatcher dispatcher;
 	
 
 	@Value("${song.name}")
