@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Dispatcher {
 	
 	private Logger logger = LoggerFactory.getLogger(Dispatcher.class);

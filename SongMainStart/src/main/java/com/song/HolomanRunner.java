@@ -11,6 +11,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import com.example.Holoman;
+import com.song.communications.TibDriver;
 import com.song.scheduler.Dispatcher;
 import com.song.services.SampleService;
 
@@ -24,7 +25,7 @@ public class HolomanRunner implements ApplicationRunner {
 	@Autowired
 	SongProperties songProperties;
 	
-	@Autowired
+	//@Autowired
 	Dispatcher dispatcher;
 	
 
@@ -37,12 +38,26 @@ public class HolomanRunner implements ApplicationRunner {
 	@Autowired
 	private SampleService sampleService;
 	
+	@Autowired
+	private TibDriver tibDriver;
+	
+	
 	private Logger logger = LoggerFactory.getLogger(HolomanRunner.class);
 		
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		// TODO Auto-generated method stub
+		logger.debug("=================================================");
+		
+		logger.debug("Tib Test" + tibDriver.getTibConfigration().toString());
+		
+		
+		
+		
+		
+		
+		
 		logger.debug("=================================================");
 		logger.debug("사용자 플로퍼티 만들어서 가져오기 " + songProperties.toString());
 		
