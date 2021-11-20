@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.tibco.tibrv.*;
 
-import ch.qos.logback.classic.spi.ThrowableProxyVO;
-
 
 
 @Service
@@ -58,7 +56,7 @@ public class TibDriver implements TibrvMsgCallback, Runnable  {
 		try 
 		{
 
-			
+			if(!Tibrv.isValid())
 			Tibrv.open(Tibrv.IMPL_NATIVE);
 
 
